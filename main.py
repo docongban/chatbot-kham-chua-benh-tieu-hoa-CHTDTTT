@@ -23,7 +23,7 @@ def no_accent_vietnamese(s):
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="admin",
+  password="Kanh1133557799",
   database="tieu_hoa"
 )
 mycursor = mydb.cursor()
@@ -55,7 +55,7 @@ mycursor = mydb.cursor()
 # gan = chon_tieu_chi("gan","Gan")
 # sot = chon_tieu_chi("sot","Sốt")
 
-an_uong = "A01"
+an_uong = "A02"
 non = "N02"
 di_ngoai = "DN01"
 bung = "B01"
