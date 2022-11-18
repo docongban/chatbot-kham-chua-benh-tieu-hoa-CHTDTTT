@@ -28,45 +28,45 @@ mydb = mysql.connector.connect(
 )
 mycursor = mydb.cursor()
 
-# def chon_tieu_chi(table, tieu_chi):
-#   print(tieu_chi)
-#   sql = f"SELECT id,code,name FROM {table}"
-#   mycursor.execute(sql)
-#   result = mycursor.fetchall()
+def chon_tieu_chi(table, tieu_chi):
+  print(tieu_chi)
+  sql = f"SELECT id,code,name FROM {table}"
+  mycursor.execute(sql)
+  result = mycursor.fetchall()
 
-#   for r in result:
-#     print(f"{r[0]}. {r[2]}")
+  for r in result:
+    print(f"{r[0]}. {r[2]}")
 
-#   x = int(input())
-#   for r in result:
-#     if x == r[0]:
-#       return no_accent_vietnamese(r[1].replace('-','').replace(',','').replace(' ',''))
+  x = int(input())
+  for r in result:
+    if x == r[0]:
+      return no_accent_vietnamese(r[1].replace('-','').replace(',','').replace(' ',''))
 
-# an_uong = chon_tieu_chi("an_uong","Ăn uống")
-# non = chon_tieu_chi("non","Nôn")
-# di_ngoai = chon_tieu_chi("di_ngoai","Đi ngoài")
-# bung = chon_tieu_chi("bung","Bụng")
-# can_nang = chon_tieu_chi("can_nang","Cân nặng")
-# da = chon_tieu_chi("da","Da")
-# da_day = chon_tieu_chi("da_day","Dạ dày")
-# mau = chon_tieu_chi("mau","Máu")
-# hong = chon_tieu_chi("hong","Họng")
-# tien_su = chon_tieu_chi("tien_su","Tiền sử")
-# gan = chon_tieu_chi("gan","Gan")
-# sot = chon_tieu_chi("sot","Sốt")
+an_uong = chon_tieu_chi("an_uong","Ăn uống")
+non = chon_tieu_chi("non","Nôn")
+di_ngoai = chon_tieu_chi("di_ngoai","Đi ngoài")
+bung = chon_tieu_chi("bung","Bụng")
+can_nang = chon_tieu_chi("can_nang","Cân nặng")
+da = chon_tieu_chi("da","Da")
+da_day = chon_tieu_chi("da_day","Dạ dày")
+mau = chon_tieu_chi("mau","Máu")
+hong = chon_tieu_chi("hong","Họng")
+tien_su = chon_tieu_chi("tien_su","Tiền sử")
+gan = chon_tieu_chi("gan","Gan")
+sot = chon_tieu_chi("sot","Sốt")
 
-an_uong = "A01"
-non = "N02"
-di_ngoai = "DN01"
-bung = "B01"
-can_nang = "CN01"
-da = "D01"
-da_day = "DD04"
-mau = "M01"
-hong = "H01"
-tien_su = "TS01"
-gan = "G01"
-sot = "S01"
+# an_uong = "A01"
+# non = "N02"
+# di_ngoai = "DN01"
+# bung = "B01"
+# can_nang = "CN01"
+# da = "D01"
+# da_day = "DD04"
+# mau = "M01"
+# hong = "H01"
+# tien_su = "TS01"
+# gan = "G01"
+# sot = "S01"
  
 ts_an_uong = 6
 ts_non = 8
