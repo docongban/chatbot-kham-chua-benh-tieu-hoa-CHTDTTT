@@ -94,7 +94,7 @@ def get_do_tuong_dong_theo_case(table, input, code):
   result = mycursor.fetchone()
   return result[0]
 
-def chuan_doan(table, benh, stt):
+def chuan_doan(table, benh):
   sql = f"SELECT * FROM {table}"
   mycursor.execute(sql)
   result = mycursor.fetchall()
@@ -121,23 +121,70 @@ def chuan_doan(table, benh, stt):
 
     allResult[index+1, benh, round(s,2)] = round(s,2)
 
-  print(max(allResult.items(), key=operator.itemgetter(1))[0], benh_detail(stt))
+  # print(max(allResult.items(), key=operator.itemgetter(1))[0], benh_detail(stt))
+  return max(allResult.items(), key=operator.itemgetter(1))[0]
 
-chuan_doan("case_viem_loet_da_day","Viêm loét dạ dày", 0)
-chuan_doan("case_thung_o_loet_da_day","Thủng ổ loét dạ dày", 1)
-chuan_doan("case_xuat_huyet_da_day","Xuất huyết dạ dày", 2)
-chuan_doan("case_trao_nguoc_da_day","Trào ngược dạ dày", 3)
-chuan_doan("case_ung_thu_da_day","Ung thư dạ dày", 4)
-chuan_doan("case_hep_mon_vi","Hẹp môn vị", 5)
-chuan_doan("case_ap_xe_gan","Áp xe gan", 6)
-chuan_doan("case_ung_thu_gan","Ung thư gan", 7)
-chuan_doan("case_tac_mat_gan","Tắc mật gan", 8)
-chuan_doan("case_xo_gan_gan","Xơ gan", 9)
-chuan_doan("case_viem_gan_a","Viêm gan A", 10)
-chuan_doan("case_viem_gan_b","Viêm gan B", 11)
-chuan_doan("case_viem_gan_c","Viêm gan C", 12)
-chuan_doan("case_viem_gan_d","Viêm gan D", 13)
-chuan_doan("case_viem_gan_e","Viêm gan E", 14)
+chuan_doan_viem_loet_da_day = chuan_doan("case_viem_loet_da_day","Viêm loét dạ dày")
+chuan_doan_thung_o_loet_da_day = chuan_doan("case_thung_o_loet_da_day","Thủng ổ loét dạ dày")
+chuan_doan_xuat_huyet_da_day = chuan_doan("case_xuat_huyet_da_day","Xuất huyết dạ dày")
+chuan_doan_trao_nguoc_da_day = chuan_doan("case_trao_nguoc_da_day","Trào ngược dạ dày")
+chuan_doan_ung_thu_da_day = chuan_doan("case_ung_thu_da_day","Ung thư dạ dày")
+chuan_doan_hep_mon_vi = chuan_doan("case_hep_mon_vi","Hẹp môn vị")
+chuan_doan_ap_xe_gan = chuan_doan("case_ap_xe_gan","Áp xe gan")
+chuan_doan_ung_thu_gan = chuan_doan("case_ung_thu_gan","Ung thư gan")
+chuan_doan_tac_mat_gan = chuan_doan("case_tac_mat_gan","Tắc mật gan")
+chuan_doan_xo_gan_gan = chuan_doan("case_xo_gan_gan","Xơ gan")
+chuan_doan_viem_gan_a = chuan_doan("case_viem_gan_a","Viêm gan A")
+chuan_doan_viem_gan_b = chuan_doan("case_viem_gan_b","Viêm gan B")
+chuan_doan_viem_gan_c = chuan_doan("case_viem_gan_c","Viêm gan C")
+chuan_doan_viem_gan_d = chuan_doan("case_viem_gan_d","Viêm gan D")
+chuan_doan_viem_gan_e = chuan_doan("case_viem_gan_e","Viêm gan E")
+
+# chuan_doan("case_viem_loet_da_day","Viêm loét dạ dày", 0)
+# chuan_doan("case_thung_o_loet_da_day","Thủng ổ loét dạ dày", 1)
+# chuan_doan("case_xuat_huyet_da_day","Xuất huyết dạ dày", 2)
+# chuan_doan("case_trao_nguoc_da_day","Trào ngược dạ dày", 3)
+# chuan_doan("case_ung_thu_da_day","Ung thư dạ dày", 4)
+# chuan_doan("case_hep_mon_vi","Hẹp môn vị", 5)
+# chuan_doan("case_ap_xe_gan","Áp xe gan", 6)
+# chuan_doan("case_ung_thu_gan","Ung thư gan", 7)
+# chuan_doan("case_tac_mat_gan","Tắc mật gan", 8)
+# chuan_doan("case_xo_gan_gan","Xơ gan", 9)
+# chuan_doan("case_viem_gan_a","Viêm gan A", 10)
+# chuan_doan("case_viem_gan_b","Viêm gan B", 11)
+# chuan_doan("case_viem_gan_c","Viêm gan C", 12)
+# chuan_doan("case_viem_gan_d","Viêm gan D", 13)
+# chuan_doan("case_viem_gan_e","Viêm gan E", 14)
+
+
+allChuanDoan = {}
+def tach_chuan_doan(chuan_doan):
+  lst_str = str(chuan_doan).replace('(','').replace(')','').split(', ')
+  allChuanDoan[lst_str[0],lst_str[1]] = lst_str[2]
+
+tach_chuan_doan(chuan_doan_viem_loet_da_day)
+tach_chuan_doan(chuan_doan_thung_o_loet_da_day)
+tach_chuan_doan(chuan_doan_xuat_huyet_da_day)
+tach_chuan_doan(chuan_doan_trao_nguoc_da_day)
+tach_chuan_doan(chuan_doan_ung_thu_da_day)
+tach_chuan_doan(chuan_doan_hep_mon_vi)
+tach_chuan_doan(chuan_doan_ap_xe_gan)
+tach_chuan_doan(chuan_doan_ung_thu_gan)
+tach_chuan_doan(chuan_doan_tac_mat_gan)
+tach_chuan_doan(chuan_doan_xo_gan_gan)
+tach_chuan_doan(chuan_doan_viem_gan_a)
+tach_chuan_doan(chuan_doan_viem_gan_b)
+tach_chuan_doan(chuan_doan_viem_gan_c)
+tach_chuan_doan(chuan_doan_viem_gan_d)
+tach_chuan_doan(chuan_doan_viem_gan_e)
+
+keyMaxChuanDoan = max(allChuanDoan.items(), key=operator.itemgetter(1))[0]
+valueMaxChuanDoan = max(allChuanDoan.items(), key=operator.itemgetter(1))[1]
+
+maxResult = str(keyMaxChuanDoan).replace('(','').replace(')','').replace('"','').replace("'","")
+stt_case = maxResult.split(', ')[0]
+ten_benh = maxResult.split(', ')[1]
+print(f"Chúng tôi dự đoán bạn mắc {ten_benh} với tỉ lệ {valueMaxChuanDoan} trong case {stt_case}")
 
 
 
