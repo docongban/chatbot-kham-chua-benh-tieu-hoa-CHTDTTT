@@ -218,7 +218,7 @@ insert into tien_su(name,code,TS01,TS02,TS03,TS04,TS05,TS06,TS07,TS08,TS09,TS10,
 create table gan(
 	id int primary key auto_increment,
     name varchar(255),
-    code varchar(10),
+    code varchar(100),
     G01 varchar(10),
     G02 varchar(10),
     G03 varchar(10),
