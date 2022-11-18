@@ -55,7 +55,7 @@ mycursor = mydb.cursor()
 # gan = chon_tieu_chi("gan","Gan")
 # sot = chon_tieu_chi("sot","Sốt")
 
-an_uong = "A01"
+an_uong = "A011"
 non = "N02"
 di_ngoai = "DN01"
 bung = "B01"
@@ -67,7 +67,7 @@ hong = "H01"
 tien_su = "TS01"
 gan = "G01"
 sot = "S01"
-
+ 
 ts_an_uong = 6
 ts_non = 8
 ts_di_ngoai = 8
