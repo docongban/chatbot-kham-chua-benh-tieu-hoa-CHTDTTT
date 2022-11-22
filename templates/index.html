@@ -7,10 +7,8 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <style>
     
     body {
@@ -22,48 +20,24 @@
         flex-direction:column;
       }
     </style> 
-
-    <py-env>
-        <!-- - paths:
-            - ./main.py -->
-    </py-env>
 </head>
 <body>
-<br>
-<py-script>
-    <!-- from main import * -->
-        
-    def sendMessage(*ags, **kws):
-
-        chat = document.getElementById('chat')
-
-        inputChat = document.getElementById('input-chat').value;
-        client = document.createElement("p")
-        client.className = "text-chat"
-        client.innerHTML = inputChat
-        chat.appendChild(client)
-
-        bot = document.createElement("p")
-        bot.className = "text-chat-auto"
-        bot.innerHTML = "sdsd"
-        chat.appendChild(bot)
-        document.getElementById('input-chat').value = ''
-
-        <!-- pyscript.write("Fahrenheit",x)     -->
-</py-script>   
+<br>  
 <div class="container">
         
     <h1 class="text-center">
         Tư vấn khám, chữa bệnh tiêu hóa
     </h1>
     <br />
-    <div class="chatbot">
+    <div class="chatbot chatbox__support">
         <div class="chat" id="chat"></div>
         <div class="action">
             <textarea id="input-chat" class="form-control input-chat" rows="1" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Nhập tin nhắn"></textarea>
-            <button id="sendMessage" type="submit" class="btn btn-info btn-send" pys-onClick="sendMessage">Gửi</button>
+            <button id="sendMessage" type="submit" class="btn btn-info btn-send send__button" >Gửi</button>
         </div>
     </div>
 </div>  
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
