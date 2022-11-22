@@ -56,17 +56,17 @@ gan = chon_tieu_chi("gan","Gan")
 sot = chon_tieu_chi("sot","Sốt")
 
 # an_uong = "A01"
-# non = "N02"
-# di_ngoai = "DN01"
+# non = "N01"
+# di_ngoai = "DN02"
 # bung = "B01"
-# can_nang = "CN01"
+# can_nang = "CN02"
 # da = "D01"
-# da_day = "DD04"
+# da_day = "DD03"
 # mau = "M01"
-# hong = "H01"
-# tien_su = "TS01"
-# gan = "G01"
-# sot = "S01"
+# hong = "H02"
+# tien_su = "TS13"
+# gan = "G05"
+# sot = "S02"
  
 ts_an_uong = 6
 ts_non = 8
