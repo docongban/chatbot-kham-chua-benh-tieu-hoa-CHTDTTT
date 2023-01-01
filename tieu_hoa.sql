@@ -1225,7 +1225,7 @@ create table case_viem_gan_e(
     sot varchar(10)
 );
 insert into case_viem_gan_e(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot) 
-values("A-02","N-02","ĐN-09","B-02","CN-02","D-02","DD-01","M-11","H-01","TS-01","G-11","S-04");
+values("A-02","N-02","ĐN-09","B-02","CN-02","D-02","DD-01","M-11","H-01","TS-01","G-11","S-04","Viêm gan E");
 insert into case_viem_gan_e(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot) 
 values("A-02","N-02","ĐN-09","B-02","CN-02","D-03","DD-01","M-11","H-01","TS-01","G-11","S-04");
 insert into case_viem_gan_e(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot) 
@@ -1263,3 +1263,783 @@ insert into benh(name, dieu_tri, loi_khuyen) values("Viêm gan B","Việc điề
 insert into benh(name, dieu_tri, loi_khuyen) values("Viêm gan C","Tiến hành một số xét nghiệm để đánh giá được tổn thương gan, qua đó lên phác đồ điều trị hợp lý nhất. Đối với những trường hợp mắc viêm gan C mạn tính thì dung thuốc điều trị kháng virus là phương pháp cần thiết","Ngừng hoặc hạn chế tối đa sử dụng rượu bia, chế độ dinh dưỡng có lợi cho gan, tăng cường vận động tiêu thụ năng lượng, ngủ đủ giấc và hạn chế trạng thái căng thẳng");
 insert into benh(name, dieu_tri, loi_khuyen) values("Viêm gan D","Hiện nay chưa có phương pháp điều trị đặc hiệu nào đối với viêm gan D cấp tính hoặc mãn tính. Bệnh nhân bị nhiễm HDV có thể được chỉ định điều trị bằng thuốc ví dụ như: Pegylated interferon alpha, Myrcludex B","Ăn uống ngủ nghỉ điều độ, vận động hợp lý, kiêng rượu bia thuốc lá chất kích thích, thận trọng khi điều trị với thuốc và luôn giữ cho thể trạng luôn trong trạng thái tốt nhất");
 insert into benh(name, dieu_tri, loi_khuyen) values("Viêm gan E","Viêm gan E thường tự giới hạn mà không cần điều trị nên nói chung bệnh nhân nhiễm HEV không cần được nhập viện. Tuy nhiên, việc nhập viện là cần thiết đối với những người bị viêm gan virus E tối cấp và việc nhập viện cũng cần được xem xét đối với phụ nữ mang thai có triệu chứng nhiễm HEV","Ăn uống ngủ nghỉ điều độ, ăn chin uống sôi, không ăn các sản phẩm đồ ăn không rõ nguồn gốc, vận động hợp lý, kiêng rượu bia thuốc lá chất kích thích, thận trọng khi điều trị với thuốc và luôn giữ cho thể trạng luôn trong trạng thái tốt nhất");
+
+
+create table case_benh(
+	id int primary key auto_increment,
+    an_uong varchar(10),
+    non varchar(10),
+    di_ngoai varchar(10),
+    bung varchar(10),
+    can_nang varchar(10),
+    da varchar(10),
+    da_day varchar(10),
+    mau varchar(10),
+    hong varchar(10),
+    tien_su varchar(100),
+    gan varchar(10),
+    sot varchar(10),
+    benh varchar(100)
+);
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-02","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-02","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-02","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-02","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-02","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-02","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-02","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-02","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-01","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-02","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-02","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-02","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-02","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-02","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-02","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-02","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-02","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-02","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-02","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-02","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-02","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-02","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-02","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-01","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-02","B-03","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-02","B-05","CN-01","D-01","DD-04","M-01","H-01","TS-03,TS-04","G-01","S-01","Viêm loét dạ dày");
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-07","B-04","CN-01","D-05","DD-05","M-01","H-01","TS-08","G-01","S-01","Thủng ổ loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-07","B-04","CN-01","D-05","DD-05","M-01","H-01","TS-01","G-01","S-01","Thủng ổ loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-07","B-03,B-04","CN-01","D-05","DD-05","M-01","H-01","TS-01","G-01","S-01","Thủng ổ loét dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-07","B-03,B-04","CN-01","D-05","DD-05","M-01","H-01","TS-08","G-01","S-01","Thủng ổ loét dạ dày");
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-05","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-01","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-05","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-01","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-05","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-01","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-05","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-01","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-04","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-01","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-04","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-01","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-04","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-01","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-04","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-01","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-05","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-08","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-05","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-08","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-05","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-08","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-05","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-08","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-04","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-08","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-04","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-08","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-04","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-08","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-04","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-08","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-05","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-03,TS-04","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-05","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-03,TS-04","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-05","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-03,TS-04","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-05","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-03,TS-04","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-04","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-03,TS-04","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-04","B-06","CN-01","D-01","DD-02","M-02","H-01","TS-03,TS-04","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-04","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-03,TS-04","G-01","S-01","Xuất huyết dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-04","B-02","CN-01","D-01","DD-02","M-02","H-01","TS-03,TS-04","G-01","S-01","Xuất huyết dạ dày");
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-02","CN-01","D-01","DD-01","M-01","H-02","TS-01","G-01","S-01","Trào ngược dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-02","CN-01","D-01","DD-01","M-01","H-03","TS-01","G-01","S-01","Trào ngược dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-02","CN-01","D-01","DD-01","M-01","H-04","TS-01","G-01","S-01","Trào ngược dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-02","CN-01","D-01","DD-01","M-01","H-02","TS-08","G-01","S-01","Trào ngược dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-02","CN-01","D-01","DD-01","M-01","H-03","TS-08","G-01","S-01","Trào ngược dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-02","CN-01","D-01","DD-01","M-01","H-04","TS-08","G-01","S-01","Trào ngược dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-02","CN-01","D-01","DD-01","M-01","H-02","TS-03,TS-04","G-01","S-01","Trào ngược dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-02","CN-01","D-01","DD-01","M-01","H-03","TS-03,TS-04","G-01","S-01","Trào ngược dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-02","CN-01","D-01","DD-01","M-01","H-04","TS-03,TS-04","G-01","S-01","Trào ngược dạ dày");
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-01","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-02","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-03,TS-04","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-06","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-07","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-02,N-03","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-02","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-04","ĐN-01","B-07","CN-02","D-01","DD-03","M-02","H-01","TS-08","G-01","S-01","Ung thư dạ dày");
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-06","M-03","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-07","M-03","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-06","M-04","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-07","M-04","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-06","M-03","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-06","M-03","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-06","M-03","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-06","M-03","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-06","M-04","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-06","M-04","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-06","M-04","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-06","M-04","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-07","M-03","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-07","M-03","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-07","M-03","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-07","M-03","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-07","M-04","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-07","M-04","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-07","M-04","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-03","CN-02","D-01","DD-07","M-04","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-06","M-03","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-07","M-03","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-06","M-04","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-07","M-04","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-06","M-03","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-06","M-03","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-06","M-03","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-06","M-03","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-06","M-04","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-06","M-04","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-06","M-04","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-06","M-04","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-07","M-03","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-07","M-03","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-07","M-03","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-07","M-03","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-07","M-04","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-07","M-04","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-07","M-04","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-03","CN-02","D-01","DD-07","M-04","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-06","M-03","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-07","M-03","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-06","M-04","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-07","M-04","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-06","M-03","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-06","M-03","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-06","M-03","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-06","M-03","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-06","M-04","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-06","M-04","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-06","M-04","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-06","M-04","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-07","M-03","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-07","M-03","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-07","M-03","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-07","M-03","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-07","M-04","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-07","M-04","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-07","M-04","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-02","ĐN-01","B-07","CN-02","D-01","DD-07","M-04","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-06","M-03","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-07","M-03","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-06","M-04","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-07","M-04","H-01","TS-01","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-06","M-03","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-06","M-03","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-06","M-03","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-06","M-03","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-06","M-04","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-06","M-04","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-06","M-04","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-06","M-04","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-07","M-03","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-07","M-03","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-07","M-03","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-07","M-03","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-07","M-04","H-01","TS-09","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-07","M-04","H-01","TS-10","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-07","M-04","H-01","TS-11","G-01","S-01","Hẹp môn vị");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-03","ĐN-01","B-07","CN-02","D-01","DD-07","M-04","H-01","TS-12","G-01","S-01","Hẹp môn vị");
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-08","B-01","CN-01","D-01","DD-01","M-02","H-01","TS-01","G-02","S-01","Áp xe gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-08","B-01","CN-01","D-01","DD-01","M-02","H-01","TS-01","G-03","S-01","Áp xe gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-08","B-01","CN-01","D-01","DD-01","M-02","H-01","TS-01","G-04","S-01","Áp xe gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-08","B-01","CN-01","D-01","DD-01","M-02","H-01","TS-01","G-05","S-01","Áp xe gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-08","B-01","CN-01","D-01","DD-01","M-05","H-01","TS-01","G-02","S-01","Áp xe gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-08","B-01","CN-01","D-01","DD-01","M-05","H-01","TS-01","G-03","S-01","Áp xe gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-08","B-01","CN-01","D-01","DD-01","M-05","H-01","TS-01","G-04","S-01","Áp xe gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-01","N-01","ĐN-08","B-01","CN-01","D-01","DD-01","M-05","H-01","TS-01","G-05","S-01","Áp xe gan");
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-02","CN-01","D-02","DD-01","M-01","H-01","TS-02","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-02","CN-01","D-02","DD-01","M-01","H-01","TS-03","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-02","CN-01","D-02","DD-01","M-01","H-01","TS-04","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-02","CN-01","D-02","DD-01","M-01","H-01","TS-15","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-02","CN-01","D-02","DD-01","M-01","H-01","TS-16","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-02","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-03","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-04","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-15","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-16","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-02","CN-01","D-02","DD-01","M-01","H-01","TS-02","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-02","CN-01","D-02","DD-01","M-01","H-01","TS-03","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-02","CN-01","D-02","DD-01","M-01","H-01","TS-04","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-02","CN-01","D-02","DD-01","M-01","H-01","TS-15","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-02","CN-01","D-02","DD-01","M-01","H-01","TS-16","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-02","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-03","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-04","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-15","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-16","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-02","CN-02","D-02","DD-01","M-01","H-01","TS-02","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-02","CN-02","D-02","DD-01","M-01","H-01","TS-03","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-02","CN-02","D-02","DD-01","M-01","H-01","TS-04","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-02","CN-02","D-02","DD-01","M-01","H-01","TS-15","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-02","CN-02","D-02","DD-01","M-01","H-01","TS-16","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-08","CN-02","D-02","DD-01","M-01","H-01","TS-02","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-08","CN-02","D-02","DD-01","M-01","H-01","TS-03","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-08","CN-02","D-02","DD-01","M-01","H-01","TS-04","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-08","CN-02","D-02","DD-01","M-01","H-01","TS-15","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-01","B-08","CN-02","D-02","DD-01","M-01","H-01","TS-16","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-02","DD-01","M-01","H-01","TS-02","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-02","DD-01","M-01","H-01","TS-03","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-02","DD-01","M-01","H-01","TS-04","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-02","DD-01","M-01","H-01","TS-15","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-02","CN-02","D-02","DD-01","M-01","H-01","TS-16","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-08","CN-02","D-02","DD-01","M-01","H-01","TS-02","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-08","CN-02","D-02","DD-01","M-01","H-01","TS-03","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-08","CN-02","D-02","DD-01","M-01","H-01","TS-04","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-08","CN-02","D-02","DD-01","M-01","H-01","TS-15","G-07","S-01","Ung thư gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-01","B-08","CN-02","D-02","DD-01","M-01","H-01","TS-16","G-07","S-01","Ung thư gan");
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-13","G-01","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-08","CN-01","D-06","DD-01","M-01","H-01","TS-13","G-01","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-09","CN-01","D-02","DD-01","M-01","H-01","TS-13","G-01","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-09","CN-01","D-06","DD-01","M-01","H-01","TS-13","G-01","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-13","G-06","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-08","CN-01","D-06","DD-01","M-01","H-01","TS-13","G-06","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-09","CN-01","D-02","DD-01","M-01","H-01","TS-13","G-06","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-09","CN-01","D-06","DD-01","M-01","H-01","TS-13","G-06","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-01","G-01","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-08","CN-01","D-06","DD-01","M-01","H-01","TS-01","G-01","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-09","CN-01","D-02","DD-01","M-01","H-01","TS-01","G-01","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-09","CN-01","D-06","DD-06","M-01","H-01","TS-01","G-01","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-08","CN-01","D-02","DD-01","M-01","H-01","TS-01","G-06","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-08","CN-01","D-06","DD-01","M-01","H-01","TS-01","G-06","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-09","CN-01","D-02","DD-01","M-01","H-01","TS-01","G-06","S-01","Tắc mật gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-01","ĐN-09","B-09","CN-01","D-06","DD-01","M-01","H-01","TS-01","G-06","S-01","Tắc mật gan");
+
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-05","H-01","TS-03","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-06","H-01","TS-03","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-07","H-01","TS-03","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-05","H-01","TS-04","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-06","H-01","TS-04","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-07","H-01","TS-04","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-05","H-01","TS-17","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-06","H-01","TS-17","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-07","H-01","TS-17","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-05","H-01","TS-03","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-06","H-01","TS-03","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-07","H-01","TS-03","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-05","H-01","TS-04","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-06","H-01","TS-04","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-07","H-01","TS-04","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-05","H-01","TS-17","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-06","H-01","TS-17","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-07","H-01","TS-17","G-03","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-05","H-01","TS-03","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-06","H-01","TS-03","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-07","H-01","TS-03","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-05","H-01","TS-04","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-06","H-01","TS-04","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-07","H-01","TS-04","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-05","H-01","TS-17","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-06","H-01","TS-17","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-07","H-01","TS-17","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-05","H-01","TS-03","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-06","H-01","TS-03","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-07","H-01","TS-03","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-05","H-01","TS-04","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-06","H-01","TS-04","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-07","H-01","TS-04","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-05","H-01","TS-17","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-06","H-01","TS-17","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-07","H-01","TS-17","G-04","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-05","H-01","TS-03","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-06","H-01","TS-03","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-07","H-01","TS-03","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-05","H-01","TS-04","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-06","H-01","TS-04","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-07","H-01","TS-04","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-05","H-01","TS-17","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-06","H-01","TS-17","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-02","DD-01","M-07","H-01","TS-17","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-05","H-01","TS-03","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-06","H-01","TS-03","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-07","H-01","TS-03","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-05","H-01","TS-04","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-06","H-01","TS-04","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-07","H-01","TS-04","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-05","H-01","TS-17","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-06","H-01","TS-17","G-05","S-01","Xơ gan");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-01","B-04","CN-02","D-07","DD-01","M-07","H-01","TS-17","G-05","S-01","Xơ gan");
+
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-11","B-02","CN-01","D-02","DD-01","M-12","H-01","TS-01","G-02","S-02","Viêm gan A");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-11","B-02","CN-01","D-02","DD-01","M-12","H-01","TS-01","G-05","S-02","Viêm gan A");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-11","B-02","CN-01","D-02","DD-01","M-12","H-01","TS-01","G-08","S-02","Viêm gan A");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-11","B-02","CN-01","D-02","DD-01","M-12","H-01","TS-01","G-06","S-02","Viêm gan A");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-11","B-02","CN-01","D-06","DD-01","M-12","H-01","TS-01","G-02","S-02","Viêm gan A");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-11","B-02","CN-01","D-06","DD-01","M-12","H-01","TS-01","G-05","S-02","Viêm gan A");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-11","B-02","CN-01","D-06","DD-01","M-12","H-01","TS-01","G-08","S-02","Viêm gan A");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-11","B-02","CN-01","D-06","DD-01","M-12","H-01","TS-01","G-06","S-02","Viêm gan A");
+
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-02","ĐN-09","B-08","CN-01","D-02","DD-01","M-13","H-01","TS-01","G-10","S-02","Viêm gan B");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-01","N-02","ĐN-09","B-08","CN-01","D-02","DD-01","M-13","H-01","TS-02","G-10","S-02","Viêm gan B");
+
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-09","B-02","CN-01","D-02","DD-01","M-09","H-01","TS-01","G-10","S-02","Viêm gan C");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-01","ĐN-09","B-02","CN-01","D-06","DD-01","M-09","H-01","TS-02","G-10","S-02","Viêm gan C");
+
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-09","B-02","CN-01","D-02","DD-01","M-10","H-01","TS-14","G-10","S-03","Viêm gan D");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh) 
+values("A-02","N-01","ĐN-09","B-02","CN-01","D-06","DD-01","M-10","H-01","TS-14","G-10","S-03","Viêm gan D");
+
+
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-02","ĐN-09","B-02","CN-02","D-02","DD-01","M-11","H-01","TS-01","G-11","S-04","Viêm gan E");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-02","ĐN-09","B-02","CN-02","D-03","DD-01","M-11","H-01","TS-01","G-11","S-04","Viêm gan E");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-02","ĐN-09","B-02","CN-02","D-02","DD-01","M-11","H-01","TS-01","G-10","S-04","Viêm gan E");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-02","ĐN-09","B-02","CN-02","D-03","DD-01","M-11","H-01","TS-01","G-10","S-04","Viêm gan E");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-02","ĐN-09","B-02","CN-02","D-02","DD-01","M-11","H-01","TS-04","G-11","S-04","Viêm gan E");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-02","ĐN-09","B-02","CN-02","D-03","DD-01","M-11","H-01","TS-04","G-11","S-04","Viêm gan E");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-02","ĐN-09","B-02","CN-02","D-02","DD-01","M-11","H-01","TS-04","G-10","S-04","Viêm gan E");
+insert into case_benh(an_uong,non,di_ngoai,bung,can_nang,da,da_day,mau,hong,tien_su,gan,sot,benh)  
+values("A-02","N-02","ĐN-09","B-02","CN-02","D-03","DD-01","M-11","H-01","TS-04","G-10","S-04","Viêm gan E");
