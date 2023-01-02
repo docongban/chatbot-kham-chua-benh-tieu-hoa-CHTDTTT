@@ -177,7 +177,7 @@ insert into hong(name,code,H01,H02,H03,H04) values("Ho","H-04",0,0,0.2,1);
 create table tien_su(
 	id int primary key auto_increment,
     name varchar(255),
-    code varchar(10),
+    code varchar(100),
     TS01 varchar(10),
     TS02 varchar(10),
     TS03 varchar(10),

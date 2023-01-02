@@ -1,4 +1,5 @@
 import operator
+import time
 from pytextdist.edit_distance import lcs_similarity
 import mysql.connector
 
@@ -70,7 +71,7 @@ ts_sot = 6
 
 def typing(x):
     global an_uong, non, di_ngoai, bung, can_nang, da, da_day, mau, hong, tien_su, gan, sot
-    
+
     trieu_chung=""
 
     for i in tieu_chi:
@@ -78,35 +79,49 @@ def typing(x):
             trieu_chung = i
             break
 
+    # lấy tên tiêu chí(triệu chứng)
     trieu_chung_DB = no_accent_vietnamese(trieu_chung.replace(" ",'_'))
 
     sql = f"SELECT id,code,name FROM {trieu_chung_DB}"
     mycursor.execute(sql)
     result = mycursor.fetchall()
 
-    print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Bạn có thể nói rõ cụ thể bạn bị {trieu_chung} như thế nào được không ạ?")
-    if(len(result) > 3):
-        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Ví dụ như: {result[1][2]}, {result[2][2]}, {result[3][2]}, ...")
-    else: 
-        resultL3 = f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Ví dụ như: "
-        for i, r in enumerate(result):
-            if i == 0: continue
-            resultL3 += r[2]
-        resultL3 += " ..."
-        print(resultL3)
-
-    print(f"{bcolors.HEADER}User:{bcolors.ENDC} ", end="")
-    x = input()
-
     dict = {}
     trieu_chung_code = ""
 
+    # lấy trạng thái của tiêu chí(triệu chứng) phù hợp nhất
     for r in result:
         dict[r[1]] = lcs_similarity(no_accent_vietnamese(r[2].lower()), no_accent_vietnamese(x.lower()))
-    for i in sorted(dict, key=dict.get, reverse=True):
-        trieu_chung_code = no_accent_vietnamese(i.replace('-','').replace(',','').replace(' ',''))
-        break
 
+    maxDuDoan = max(dict.items(), key=operator.itemgetter(1))
+    if maxDuDoan[1] >= 0.7:
+        trieu_chung_code = no_accent_vietnamese(maxDuDoan[0].replace('-','').replace(',','').replace(' ',''))
+    else: 
+        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Bạn có thể nói rõ cụ thể bạn bị {trieu_chung} như thế nào được không ạ?")
+        if(len(result) > 3):
+            print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Ví dụ như: {result[1][2]}, {result[2][2]}, {result[3][2]}, ...")
+        else: 
+            resultL3 = f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Ví dụ như: "
+            for i, r in enumerate(result):
+                if i == 0: continue
+                resultL3 += r[2]
+            resultL3 += " ..."
+            print(resultL3)
+
+        print(f"{bcolors.HEADER}User:{bcolors.ENDC} ", end="")
+        x = input()
+
+        dict = {}
+        trieu_chung_code = ""
+
+        # lấy trạng thái của tiêu chí(triệu chứng) phù hợp nhất
+        for r in result:
+            dict[r[1]] = lcs_similarity(no_accent_vietnamese(r[2].lower()), no_accent_vietnamese(x.lower()))
+        for i in sorted(dict, key=dict.get, reverse=True):
+            trieu_chung_code = no_accent_vietnamese(i.replace('-','').replace(',','').replace(' ',''))
+            break
+
+    # gán lại giá trị(trạng thái) cho tiêu chí ứng với tên tiêu chí vừa tìm
     if "an_uong" == trieu_chung_DB:
         an_uong = trieu_chung_code
     elif "non" == trieu_chung_DB:
@@ -134,35 +149,29 @@ def typing(x):
     
     return trieu_chung
 
-print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Chúng tôi có thể giúp gì cho bạn?")
-while True:
+def tuong_tac():
+    print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Chúng tôi có thể giúp gì cho bạn?")
+    while True:
 
-    x = input(f"{bcolors.HEADER}User:{bcolors.ENDC} ")
-    if "khong" in no_accent_vietnamese(x.lower()):
-        break
+        x = input(f"{bcolors.HEADER}User:{bcolors.ENDC} ")
+        if "khong" in no_accent_vietnamese(x.lower()):
+            break
 
-    print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Ngoài {typing(x)} ra bạn còn đau chỗ nào khác nữa không?")
-    
+        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Ngoài {typing(x)} ra bạn còn đau chỗ nào khác nữa không?")
+        
 
-print(an_uong)
-print(non)
-print(di_ngoai)
-print(bung)
-print(can_nang)
-print(da)
-print(da_day)
-print(mau)
-print(hong)
-print(tien_su)
-print(gan)
-print(sot)
-
-def benh_detail(index):
-  sql = "SELECT * FROM benh"
-  mycursor.execute(sql)
-  result = mycursor.fetchall()
-
-  return result[index][2]
+    print(an_uong)
+    print(non)
+    print(di_ngoai)
+    print(bung)
+    print(can_nang)
+    print(da)
+    print(da_day)
+    print(mau)
+    print(hong)
+    print(tien_su)
+    print(gan)
+    print(sot)
 
 def get_do_tuong_dong_theo_case(table, input, code):
   sql = f"select {input} from {table} where code='{code}'"
@@ -191,17 +200,39 @@ def chuan_doan():
     dtd_gan = float(get_do_tuong_dong_theo_case('gan',gan,x[11]))
     dtd_sot = float(get_do_tuong_dong_theo_case('sot',sot,x[12]))
 
+    # tính Smax
     s = (dtd_an_uong*ts_an_uong + dtd_non*ts_non + dtd_di_ngoai*ts_di_ngoai + dtd_bung*ts_bung 
     + dtd_can_nang*ts_can_nang + dtd_da*ts_da + dtd_da_day*ts_da_day + dtd_mau*ts_mau + dtd_hong*ts_hong 
     + dtd_tien_su*ts_tien_su + dtd_gan*ts_gan + dtd_sot*ts_sot) / (10*3 + 8*3 + 6*4 + 2*4)
 
     allResult[index+1, x[13], round(s,2)] = round(s,2)
 
+  #   Lấy ra Smax lớn nhất
   return max(allResult.items(), key=operator.itemgetter(1))[0]
 
-finalResult = chuan_doan()
-maxResult = str(finalResult).replace('(','').replace(')','').replace('"','').replace("'","")
-stt_case = maxResult.split(', ')[0]
-ten_benh = maxResult.split(', ')[1]
-ti_le = maxResult.split(', ')[2]
-print(f"Chúng tôi dự đoán bạn mắc {ten_benh} với tỉ lệ {ti_le} trong case {stt_case}")
+def benh_detail(ten_benh):
+  sql = f"SELECT dieu_tri, loi_khuyen FROM benh where name like '%{ten_benh}%'"
+  mycursor.execute(sql)
+  result = mycursor.fetchall()
+
+  return result
+
+while True:
+    tuong_tac()
+
+    finalResult = chuan_doan()
+    maxResult = str(finalResult).replace('(','').replace(')','').replace('"','').replace("'","")
+    stt_case = maxResult.split(', ')[0]
+    ten_benh = maxResult.split(', ')[1]
+    ti_le = maxResult.split(', ')[2]
+    # print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Chúng tôi dự đoán bạn mắc {ten_benh} với tỉ lệ {ti_le} trong case {stt_case}")
+    print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Chúng tôi dự đoán bạn mắc {ten_benh}")
+    time.sleep(0.5)
+    print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Để điều trị {ten_benh} chúng tôi có một vài gợi ý như sau: {benh_detail(ten_benh)[0][0]}")
+    time.sleep(1)
+    print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Cùng với đó bạn cũng nên {benh_detail(ten_benh)[0][1]}")
+    time.sleep(1.5) 
+    print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Cảm ơn bạn đã sử dụng dịch vụ chatbot của chúng tôi! Bạn có muốn bắt đầu một cuộc hội thoại mới?")
+    hoi_thoai_moi = input(f"{bcolors.HEADER}User:{bcolors.ENDC} ")
+    if "khong" in no_accent_vietnamese(hoi_thoai_moi.lower()):
+        break
