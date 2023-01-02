@@ -94,10 +94,11 @@ def typing(x):
         dict[r[1]] = lcs_similarity(no_accent_vietnamese(r[2].lower()), no_accent_vietnamese(x.lower()))
 
     maxDuDoan = max(dict.items(), key=operator.itemgetter(1))
+    # Nếu tỉ lệ giống nhau quá 70% thì chọn không sẽ yêu cầu ng dùng nhập chi tiết tình trạng
     if maxDuDoan[1] >= 0.7:
         trieu_chung_code = no_accent_vietnamese(maxDuDoan[0].replace('-','').replace(',','').replace(' ',''))
     else: 
-        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Bạn có thể nói rõ cụ thể bạn bị {trieu_chung} như thế nào được không ạ?")
+        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Bạn có thể nói rõ cụ thể {trieu_chung} của bạn như thế nào được không ạ?")
         if(len(result) > 3):
             print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Ví dụ như: {result[1][2]}, {result[2][2]}, {result[3][2]}, ...")
         else: 
@@ -155,23 +156,21 @@ def tuong_tac():
 
         x = input(f"{bcolors.HEADER}User:{bcolors.ENDC} ")
         if "khong" in no_accent_vietnamese(x.lower()):
-            break
+            break 
+        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Ngoài {typing(x)} ra bạn còn bị vấn đề gì khác nữa không?")      
 
-        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Ngoài {typing(x)} ra bạn còn đau chỗ nào khác nữa không?")
-        
-
-    print(an_uong)
-    print(non)
-    print(di_ngoai)
-    print(bung)
-    print(can_nang)
-    print(da)
-    print(da_day)
-    print(mau)
-    print(hong)
-    print(tien_su)
-    print(gan)
-    print(sot)
+    # print(an_uong)
+    # print(non)
+    # print(di_ngoai)
+    # print(bung)
+    # print(can_nang)
+    # print(da)
+    # print(da_day)
+    # print(mau)
+    # print(hong)
+    # print(tien_su)
+    # print(gan)
+    # print(sot)
 
 def get_do_tuong_dong_theo_case(table, input, code):
   sql = f"select {input} from {table} where code='{code}'"
