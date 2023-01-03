@@ -82,6 +82,18 @@ def typing(x):
     # lấy tên tiêu chí(triệu chứng)
     trieu_chung_DB = no_accent_vietnamese(trieu_chung.replace(" ",'_'))
 
+    # nếu không tìm được tên tiêu chí sẽ yêu cầu người dùng nhập lại cho đến khi tìm được
+    while trieu_chung_DB == "":
+        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Bạn có thể nói rõ tình trạng hoặc một bộ phận nào đó của bạn gặp vấn đề. Ví dụ như: nôn, đi ngoài, bụng, máu, ...")
+        x = input(f"{bcolors.HEADER}User:{bcolors.ENDC} ")
+        for i in tieu_chi:
+            if i in x:
+                trieu_chung = i
+                # lấy tên tiêu chí(triệu chứng)
+                trieu_chung_DB = no_accent_vietnamese(trieu_chung.replace(" ",'_'))
+                break
+
+    # lấy tất cả trạng thái của tiêu chí(triệu chứng)
     sql = f"SELECT id,code,name FROM {trieu_chung_DB}"
     mycursor.execute(sql)
     result = mycursor.fetchall()
