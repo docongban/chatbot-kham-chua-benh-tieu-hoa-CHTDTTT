@@ -74,6 +74,7 @@ def typing(x):
 
     trieu_chung=""
 
+    # tìm tiêu chí trong câu người dùng nhập
     for i in tieu_chi:
         if i in x:
             trieu_chung = i
@@ -231,18 +232,21 @@ def benh_detail(ten_benh):
 while True:
     tuong_tac()
 
-    finalResult = chuan_doan()
-    maxResult = str(finalResult).replace('(','').replace(')','').replace('"','').replace("'","")
-    stt_case = maxResult.split(', ')[0]
-    ten_benh = maxResult.split(', ')[1]
-    ti_le = maxResult.split(', ')[2]
-    # print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Chúng tôi dự đoán bạn mắc {ten_benh} với tỉ lệ {ti_le} trong case {stt_case}")
-    print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Chúng tôi dự đoán bạn mắc {ten_benh}")
-    time.sleep(0.5)
-    print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Để điều trị {ten_benh} chúng tôi có một vài gợi ý như sau: {benh_detail(ten_benh)[0][0]}")
-    time.sleep(1)
-    print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Cùng với đó bạn cũng nên {benh_detail(ten_benh)[0][1]}")
-    time.sleep(1.5) 
+    if an_uong == "A01" and non == "N01" and di_ngoai == "DN01" and bung == "B01" and can_nang == "CN01" and da == "D01" and da_day == "DD01" and mau == "M01" and hong == "H01" and tien_su == "TS01" and gan == "G01" and sot == "S01":
+        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Bạn không bị mắc bệnh")
+    else:
+        finalResult = chuan_doan()
+        maxResult = str(finalResult).replace('(','').replace(')','').replace('"','').replace("'","")
+        stt_case = maxResult.split(', ')[0]
+        ten_benh = maxResult.split(', ')[1]
+        ti_le = maxResult.split(', ')[2]
+        # print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Chúng tôi dự đoán bạn mắc {ten_benh} với tỉ lệ {ti_le} trong case {stt_case}")
+        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Chúng tôi dự đoán bạn mắc {ten_benh}")
+        time.sleep(0.5)
+        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Để điều trị {ten_benh} chúng tôi có một vài gợi ý như sau: {benh_detail(ten_benh)[0][0]}")
+        time.sleep(1)
+        print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Cùng với đó bạn cũng nên {benh_detail(ten_benh)[0][1]}")
+        time.sleep(1.5) 
     print(f"{bcolors.OKGREEN}Bot :{bcolors.ENDC} Cảm ơn bạn đã sử dụng dịch vụ chatbot của chúng tôi! Bạn có muốn bắt đầu một cuộc hội thoại mới?")
     hoi_thoai_moi = input(f"{bcolors.HEADER}User:{bcolors.ENDC} ")
     if "khong" in no_accent_vietnamese(hoi_thoai_moi.lower()):
